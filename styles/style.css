@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: white;
+}
+header{
+    height: 100vh;
+}
+header nav{
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header nav img{
+    height: 90%;
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    color: white;
+}
+header nav ul li{
+    list-style: none;
+    cursor: pointer;
+}
+.login__btn:hover{
+    background-color: transparent !important;
+    border: 1px solid white !important;
+    color: white !important;
+}
+.btn{
+    background-color: transparent;
+    border: 1px solid #08415C;
+    padding: 0.3em 1.8em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 500ms linear;
+}
+.btn__primary{
+    background-color: #388697;
+    color: white;
+    border: 1px solid transparent;
+    transition: 500ms linear;
+}
+.btn:hover{
+    border: 1px solid transparent;
+    background-color: #08415C;
+    color: white;
+}
+.btn__primary:hover{
+    background-color: #08415C;
+}
+
+.header__items__container{
+    background: linear-gradient(#08415C,transparent);
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    justify-content: space-around;
+    height: 95vh;
+    align-items: center;
+    z-index: -2;
+}
+.content__container{
+    margin-left: 2em;
+    color: #08415C;
+    width: 100%;
+    flex-basis: 50%;
+    padding: 0 100px;
+    margin-top: 2em;
+}
+.content__container .btn__container{
+    margin-top: 2em;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+}
+.content__container .btn__container h5{
+    font-size: 1.3em;
+    font-weight: 300;
+    padding: 1em 2em;
+}
+
+.content__container p{
+    margin-top: 1em;
+    letter-spacing: 2px;
+    font-weight: 200;
+    text-align: justify;
+}
+.content__container h2{
+    font-size: 5em;
+    line-height:60px;
+}
+.content__container h4{
+    margin-top: 5px;
+    font-size: 3em;
+    font-weight: 100;
+    text-align: center;
+}
+.content__container .emp__text{
+    font-size:4em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+.img__container {
+    height: 100%;
+    z-index: -1;
+    flex-basis: 50%;
+    position: relative;
+}
+.img__container img{
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100px;
+    transition: 500ms linear;
+}
+.img__container img:hover{
+    bottom: 120px;
+}
+
+/* movies start from here */
+main{
+    position: relative;
+}
+.movies__container{
+    display: flex;
+    gap: 0.5em;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.movies__portion{
+    padding: 1em 2em;
+    background-color: #08415C;
+    height: 100vh;
+}
+.movies__portion h2{
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 2em;
+}
+.movies__portion small{
+    margin-top: 10px;
+    display: block;
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    font-weight: 100;
+    font-size: 1em;
+}
+.movie__container{
+    background-color: rgba(255, 255, 255, 0.075);
+    height: max-content;
+    color: #08415C;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    width: 20em;
+    height: 35em;
+    padding: 10px 10px;
+}
+.movie__container img{
+    width: 19em;
+    border-radius: 8px;
+}
+.movie__container h2{
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 200;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+
+/* ==================MEDIA QURIES (MEDIUM DEVICES)=============== */
+
+@media screen and (max-width:1024px){
+    .img__container{
+        display: none;
+    }
+}
+
+/* ==================MEDIA QURIES (SMALL DEVICES)=============== */
+
+@media screen and (max-width:600px) {
+    header nav ul{
+        display: none;
+    }
+    .img__container{
+        display: none;
+    }
+    .content__container{
+        margin-top: 4em;
+        padding: 0 2px !important;
+    }
+    .content__container h2{
+        font-size: 3em;
+    }
+    .content__container h4{
+        font-size: 2em;
+    }
+    .content__container .emp__text{
+        font-size: 3em;
+    }
+    .content__container .btn__container{
+        gap: 0.3em;
+    }
+    .btn{
+        padding: 0.5em 1em !important;
+        font-size: 1em !important;
+    }
+}
