@@ -10,6 +10,7 @@ body{
 }
 header{
     height: 100vh;
+    background: linear-gradient(#08415C,transparent);
 }
 header nav{
     height: 8vh;
@@ -17,6 +18,9 @@ header nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    z-index: 4;
+    position: fixed;
+    transition: 500ms linear;
 }
 header nav img{
     height: 90%;
@@ -35,6 +39,17 @@ header nav ul li{
     background-color: transparent !important;
     border: 1px solid white !important;
     color: white !important;
+}
+.nav__scroll{
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(15px);
+}
+.nav__scroll ul li{
+    color: #08415C;
+}
+.nav__scroll
+.nav__top{
+    background-color: transparent;
 }
 .btn{
     background-color: transparent;
@@ -60,23 +75,18 @@ header nav ul li{
 }
 
 .header__items__container{
-    background: linear-gradient(#08415C,transparent);
     display: flex;
-    position: absolute;
-    top: 0;
     width: 100%;
     justify-content: space-around;
     height: 95vh;
     align-items: center;
-    z-index: -2;
+    z-index: 1;
 }
 .content__container{
-    margin-left: 2em;
     color: #08415C;
     width: 100%;
     flex-basis: 50%;
     padding: 0 100px;
-    margin-top: 2em;
 }
 .content__container .btn__container{
     margin-top: 2em;
@@ -97,17 +107,18 @@ header nav ul li{
     text-align: justify;
 }
 .content__container h2{
-    font-size: 5em;
+    font-size: 4em;
     line-height:60px;
+    text-align: center;
 }
 .content__container h4{
     margin-top: 5px;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 100;
     text-align: center;
 }
 .content__container .emp__text{
-    font-size:4em;
+    font-size:3em;
     font-weight: 300;
     letter-spacing: 2px;
     text-align: center;
@@ -116,7 +127,7 @@ header nav ul li{
 
 .img__container {
     height: 100%;
-    z-index: -1;
+    z-index: 2;
     flex-basis: 50%;
     position: relative;
 }
@@ -125,11 +136,11 @@ header nav ul li{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 100px;
+    bottom: 150px;
     transition: 500ms linear;
 }
 .img__container img:hover{
-    bottom: 120px;
+    bottom: 170px;
 }
 
 /* movies start from here */
@@ -141,11 +152,18 @@ main{
     gap: 0.5em;
     justify-content: space-around;
     margin-top: 20px;
+    transform: translateX(18rem);
+    transition: 500ms linear;
 }
 .movies__portion{
     padding: 1em 2em;
     background-color: #08415C;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
 }
 .movies__portion h2{
     color: rgba(255, 255, 255, 0.8);
@@ -171,6 +189,7 @@ main{
     width: 20em;
     height: 35em;
     padding: 10px 10px;
+    transition: 200ms linear;
 }
 .movie__container img{
     width: 19em;
@@ -182,6 +201,41 @@ main{
     font-weight: 200;
     text-align: center;
     font-size: 1.2em;
+}
+.movie__container:hover{
+    transform: translateY(-10px);
+}
+
+.move__left__btn,.move__right__btn{
+    position: absolute;
+    padding: 7rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.move__left__btn,.move__right__btn i{
+    color: white;
+    font-size: 2em;
+}
+.move__left__btn{
+    background-color: rgba(255, 255, 255, 0.15);
+    left: 10px;
+}
+.move__right__btn{
+    background-color: rgba(255, 255, 255, 0.15);
+    right: 10px;
+}
+.move__right__btn:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.move__left__btn:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.characters__container{
+    height: 100vh;
 }
 
 

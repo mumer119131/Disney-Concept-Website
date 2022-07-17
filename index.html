@@ -7,10 +7,11 @@
     <title>Home - Disney</title>
     <link rel="icon" href="assets/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav id="nav_bar">
             <img src="assets/logo.png" alt="logo">
             <ul>
                 <li>Home</li>
@@ -44,6 +45,7 @@
         <div class="movies__portion">
             <small>Our all time favorite</small>
             <h2>Movies</h2>
+            <div class="move__left__btn" id="move__left__btn"><i class="fa-solid fa-chevron-left"></i></div>
             <div class="movies__container">
                 <div class="movie__container">
                     <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/snowwhite-1656020802.jpeg?crop=1xw:1xh;center,top&resize=980:*" alt="img">
@@ -54,19 +56,58 @@
                     <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/beautyandthebeast-1624294898.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="img">
                     <h2>Beauty and the Beast (1991)</h2>
                 </div>
-
+                
                 <div class="movie__container">
                     <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lionking-1624295189.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="img">
                     <h2>Lion King (1994)</h2>
                 </div>
-
+                
                 <div class="movie__container">
                     <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/toystory-1624295494.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="img">
                     <h2>Toy Story (1995)</h2>
                 </div>
 
+                <div class="movie__container">
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/beautyandthebeast-1624294898.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="img">
+                    <h2>Beauty and the Beast (1991)</h2>
+                </div>
+                
+                <div class="movie__container">
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/toystory-1624295494.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="img">
+                    <h2>Toy Story (1995)</h2>
+                </div>
+                
             </div>
+            <div class="move__right__btn" id="move__right__btn"><i class="fa-solid fa-angle-right"></i></div>
+        </div>
+        <div class="characters__container">
+            
         </div>
     </main>
-</body>
-</html>
+
+    <script>
+        const left__btn = document.querySelector(".move__left__btn");
+        const right__btn = document.querySelector(".move__right__btn");
+        const movies__container = document.querySelector(".movies__container")
+        left__btn.addEventListener('click', ()=>{
+            movies__container.style.transform = "translateX(18rem)";
+        });
+        right__btn.addEventListener('click', ()=>{
+            movies__container.style.transform = "translateX(-18rem)";
+        });
+
+        var myNav = document.getElementById('nav_bar');
+        window.onscroll = function () { 
+            "use strict";
+            if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200 ) {
+                myNav.classList.add("nav__scroll");
+                myNav.classList.remove("nav__top");
+            }else {
+                myNav.classList.add("nav__top");
+                myNav.classList.remove("nav__scroll");
+            }
+        }
+
+    </script>
+    </body>
+    </html>
