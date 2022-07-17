@@ -234,6 +234,48 @@ main{
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+.get__subscription__container{
+    height: 40vh;
+    background-color: #388697;
+    margin: 3rem 10%;
+    padding:2rem;
+    border-radius: 8px ;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.get__subscription__container p{
+    font-weight: 200;
+    margin-top: 1rem;
+}
+
+.get__subscription__container h4{
+    border: 1px solid transparent;
+    background-color: white;
+    color: #08415C;
+    width: max-content;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 2rem;
+    font-weight: 400;
+    margin-right: 0.5rem;
+    transition: 500ms ease;
+    cursor: pointer;
+}
+.get__subscription__container .learn__more__btn{
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+.get__subscription__container h4:hover{
+    background-color: #08415C;
+    color: white;
+}
 .characters__container{
     height: 100vh;
 }
