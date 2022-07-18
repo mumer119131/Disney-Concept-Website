@@ -36,9 +36,8 @@ header nav ul li{
     cursor: pointer;
 }
 .login__btn:hover{
-    background-color: transparent !important;
-    border: 1px solid white !important;
-    color: white !important;
+    background-color: rgba(255, 255, 255, 0.75) !important;
+    color: #08415C !important;
 }
 .nav__scroll{
     background-color: rgba(255, 255, 255, 0.75);
@@ -58,6 +57,7 @@ header nav ul li{
     border-radius: 4px;
     cursor: pointer;
     transition: 500ms linear;
+    text-transform: uppercase;
 }
 .btn__primary{
     background-color: #388697;
@@ -276,10 +276,137 @@ main{
     background-color: #08415C;
     color: white;
 }
-.characters__container{
-    height: 100vh;
+.get__subscription__container .learn__more__btn:hover{
+    border: 1px solid transparent !important;
+}
+.characters__portion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.characters__portion h2{
+    font-size: 2em;
+    color: #08415C;
+}
+.characters__portion small{
+    margin-top: 10px;
+    display: block;
+    color: #08415C;
+    text-align: center;
+    font-weight: 100;
+    font-size: 1em;
+}
+.characters__container
+{
+    height: 50vh;
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+.character__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10rem;
+
+}
+.character__container img{
+    width: max-content;
+    height: 15rem;
+
+}
+.character__container h4{
+    font-weight: 100;
+    font-size: 1.3rem;
+    margin-top: 10px;
 }
 
+.team__portion{
+    height: 100vh;
+    width: 100%;
+    background-color: #08415C;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s linear;
+}
+.team__portion small{
+    margin-top: 10px;
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-weight: 100;
+    font-size: 1em;
+}
+.team__portion > h2{
+    font-size: 2em;
+}
+.team__members__container{
+    width: 100%;
+    height: 17em;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+.team__member{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 1s linear;
+    cursor: pointer;
+}
+.team__member img{
+    width: 17rem;
+    border-radius: 8px;
+    transition: 200ms linear;
+}
+.team__member .team__image__container{
+    position: relative;
+}
+.team__member .team__image__container .contact__btn__team{
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #08415C;
+    text-transform: uppercase;
+    padding: 0.8rem 3rem;
+    border-radius: 10px;
+    transition: 500ms linear;
+    display: none;
+    
+}
+.team__member img:hover{
+    filter: brightness(80%);
+    width: 19rem;
+}
+.team__member:hover .contact__btn__team{
+    transition: 1s linear;
+    display: block;
+}
+.contact__btn__team:hover{
+    background-color: #388697;
+    color: white;
+}
+.team__member h2{
+    font-weight: 400;
+    font-size: 1.5rem ;
+    margin-top: 10px;
+}
+.team__member h4{
+    font-weight: 200;
+    font-size: 1rem;
+}
 
 
 /* ==================MEDIA QURIES (MEDIUM DEVICES)=============== */
