@@ -10,7 +10,7 @@ body{
 }
 header{
     height: 100vh;
-    background: linear-gradient(#08415C,transparent);
+    background: linear-gradient(#08415cdf,transparent);
 }
 header nav{
     height: 8vh;
@@ -179,7 +179,8 @@ main{
     font-size: 1em;
 }
 .movie__container{
-    background-color: rgba(255, 255, 255, 0.075);
+    /* background-color: rgba(255, 255, 255, 0.075); */
+    background-color: transparent;
     height: max-content;
     color: #08415C;
     display: flex;
@@ -235,10 +236,9 @@ main{
 }
 
 .get__subscription__container{
-    height: 40vh;
     background-color: #388697;
     margin: 3rem 10%;
-    padding:2rem;
+    padding:3rem 2rem;
     border-radius: 8px ;
     color: white;
     display: flex;
@@ -280,6 +280,7 @@ main{
     border: 1px solid transparent !important;
 }
 .characters__portion{
+    padding: 5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -298,7 +299,6 @@ main{
 }
 .characters__container
 {
-    height: 50vh;
     width: 100%;
     margin-top: 2rem;
     display: flex;
@@ -325,7 +325,7 @@ main{
 }
 
 .team__portion{
-    height: 100vh;
+    padding: 7rem 0 12rem;
     width: 100%;
     background-color: #08415C;
     color: rgba(255, 255, 255, 0.8);
@@ -348,7 +348,6 @@ main{
 }
 .team__members__container{
     width: 100%;
-    height: 17em;
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -365,7 +364,7 @@ main{
 .team__member img{
     width: 17rem;
     border-radius: 8px;
-    transition: 200ms linear;
+    transition: 500ms linear;
 }
 .team__member .team__image__container{
     position: relative;
@@ -377,7 +376,7 @@ main{
     left: 50%;
     transform: translateX(-50%);
     bottom: 2rem;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.8);
     color: #08415C;
     text-transform: uppercase;
     padding: 0.8rem 3rem;
@@ -393,6 +392,7 @@ main{
 .team__member:hover .contact__btn__team{
     transition: 1s linear;
     display: block;
+    bottom: 0;
 }
 .contact__btn__team:hover{
     background-color: #388697;
@@ -408,6 +408,182 @@ main{
     font-size: 1rem;
 }
 
+.booking__portion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.booking__portion small{
+    margin-top: 10px;
+    display: block;
+    color: #08415C;
+    text-align: center;
+    font-weight: 100;
+    font-size: 1em;
+}
+.booking__portion h2{
+    font-size: 2em;
+    color: #08415C;
+}
+.booking__form__container{
+    display: flex;
+    width: 100%;
+    margin-top: 3rem;
+    padding: 0 2rem;
+}
+.booking__image__container{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.booking__image__container img{
+    width: 20rem;
+}
+.booking__form{
+    background-color: rgba(0, 0, 0, 0.055);
+    padding: 5em 1em;
+    border-radius: 8px;
+    flex-basis: 50%;
+    position: relative;
+}
+.booking__form img{
+    width: 15rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -12rem;
+    transition: 500ms linear;
+}
+.booking__form img:hover{
+    transform: translateY(-20px);
+}
+.booking__form h4{
+    color: #08415C;
+    font-weight: 300;
+}
+.booking__form input{
+    width: 100%;
+    padding: 1em;
+    margin-top: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #08415C;
+}
+.booking__form .card__detail{
+    display: flex;
+    gap: 1em;
+}
+.booking__form input[type="submit"]{
+    background-color: #08415C;
+    color: white;
+    letter-spacing: 0.5em;
+    border: none;
+    border-radius: 8px;
+}
+.brands__portion{
+    margin: 4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.brands__portion small{
+    margin-top: 10px;
+    display: block;
+    color: #08415C;
+    text-align: center;
+    font-weight: 100;
+    font-size: 1em;
+}
+
+.brands__portion h2{
+    font-size: 2em;
+    color: #08415C;
+
+}
+.collaboration__brands{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+.collaboration__brands img{
+    width: 12rem;
+}
+footer{
+    background-color: #08415C;
+    display: flex;
+    flex-wrap: wrap;
+    color: rgba(255, 255, 255, 0.75)
+}
+footer .social__handles{
+    flex-basis: 20%;
+    text-align: center;
+    padding: 2rem;
+}
+.social__handles p{
+    text-align: center;
+    font-weight: 200;
+}
+.social__handles img{
+    width: 7em;
+}
+
+footer .navigation__page{
+    flex-basis: 20%;
+    padding: 2em;
+}
+footer ul{
+    list-style: none;
+    line-height: 2.3em;
+}
+footer  ul a{
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    transition: 500ms ease;
+}
+footer ul a:hover{
+    text-decoration: underline;
+}
+footer .footer__support{
+    flex-basis: 20%;
+    padding: 2em;
+}
+
+footer .signup__user{
+    flex-basis: 40%;
+    padding: 2em;
+}
+footer .signup__user h4{
+    font-weight: 200;
+}
+footer .signup__user input[type="text"]{
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid #08415C;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    padding: 0.5rem 1em;
+}
+footer .signup__user input[type="submit"]{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #08415C;
+    padding: 1em;
+    margin-top: 1em;
+    border: none;
+    border-radius: 4px ;
+    transition: 500ms linear;
+    letter-spacing: 2px;
+}
+footer .signup__user input[type="submit"]:hover{
+    background-color: #388697;
+    color: white;
+}
 
 /* ==================MEDIA QURIES (MEDIUM DEVICES)=============== */
 
@@ -445,5 +621,15 @@ main{
     .btn{
         padding: 0.5em 1em !important;
         font-size: 1em !important;
+    }
+    .booking__image__container{
+        display: none;
+    }
+    .booking__form{
+        margin-top: 3rem;
+        flex-basis: 100%;
+    }
+    .booking__form img{
+        display: none;
     }
 }
