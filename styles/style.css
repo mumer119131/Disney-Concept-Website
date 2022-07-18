@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: white;
 }
@@ -31,9 +34,13 @@ header nav ul{
     gap: 3em;
     color: white;
 }
-header nav ul li{
+header nav ul li {
     list-style: none;
     cursor: pointer;
+}
+header nav ul li a{
+    color: white;
+    text-decoration: none;
 }
 .login__btn:hover{
     background-color: rgba(255, 255, 255, 0.75) !important;
@@ -43,7 +50,7 @@ header nav ul li{
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(15px);
 }
-.nav__scroll ul li{
+.nav__scroll ul li a{
     color: #08415C;
 }
 .nav__scroll
@@ -311,12 +318,16 @@ main{
     flex-direction: column;
     align-items: center;
     width: 10rem;
+    height: 20rem;
 
 }
 .character__container img{
     width: max-content;
     height: 15rem;
-
+    transition: 500ms linear;
+}
+.character__container img:hover{
+    height: 17rem;
 }
 .character__container h4{
     font-weight: 100;
@@ -360,6 +371,7 @@ main{
     align-items: center;
     transition: 1s linear;
     cursor: pointer;
+    height: 25em;
 }
 .team__member img{
     width: 17rem;
@@ -377,6 +389,7 @@ main{
     transform: translateX(-50%);
     bottom: 2rem;
     background-color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
     color: #08415C;
     text-transform: uppercase;
     padding: 0.8rem 3rem;
@@ -590,6 +603,10 @@ footer .signup__user input[type="submit"]:hover{
 @media screen and (max-width:1024px){
     .img__container{
         display: none;
+    }
+    .booking__form img{
+        width: 7rem;
+        top: -5rem;
     }
 }
 
