@@ -40,8 +40,20 @@
         </div>
 
         </div>
+        <div class="side__popup">
+            <h5>Ticket Bought Successful!</h5>
+        </div>
     </header>
     <main>
+        <div class="get__subscription__container" id="get_subscription">
+            <h2>Get your Subscription to watch all movies.</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem odit velit quia temporibus eius accusamus, autem laboriosam ipsa. Quisquam soluta id nisi expedita consequuntur. Velit nam sunt adipisci quasi numquam!</p>
+            <div class="btn__container">
+
+                <h4>Suscribe</h4>
+                <h4 class="learn__more__btn">Learn More</h4>
+            </div>
+            </div>
         <div class="movies__portion" id="movies_portion">
             <small>Our all time favorite</small>
             <h2>Movies</h2>
@@ -80,15 +92,6 @@
             </div>
             <div class="move__right__btn" id="move__right__btn"><i class="fa-solid fa-angle-right"></i></div>
         </div>
-        <div class="get__subscription__container" id="get_subscription">
-            <h2>Get your Subscription to watch all movies.</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem odit velit quia temporibus eius accusamus, autem laboriosam ipsa. Quisquam soluta id nisi expedita consequuntur. Velit nam sunt adipisci quasi numquam!</p>
-            <div class="btn__container">
-
-                <h4>Suscribe</h4>
-                <h4 class="learn__more__btn">Learn More</h4>
-            </div>
-            </div>
         
         <div class="characters__portion" id="character_portion">
             <small>Check out our all new upcoming</small>
@@ -191,7 +194,7 @@
                         </div>
                         <input type="password" name="password" id="password" placeholder="Password" required>
                         <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
-                        <input type="submit" value="BUY">
+                        <input type="submit" value="BUY" id="buy_btn">
                     </form>
                 </div>
             </div>
@@ -265,6 +268,14 @@
                 myNav.classList.remove("nav__scroll");
             }
         }
+        document.getElementById('buy_btn').addEventListener('click',()=>{
+            document.querySelector('.side__popup').style.transform = "translateX(0)";
+            setTimeout(function(){
+                document.querySelector('.side__popup').style.transform = "translateX(15rem)";
+            },2000);
+
+            
+        })
 
     </script>
     </body>

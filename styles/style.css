@@ -13,11 +13,12 @@ body{
 }
 header{
     height: 100vh;
-    background: linear-gradient(#08415cdf,transparent);
+    background: #08415C;
+    overflow: hidden;
 }
 header nav{
     height: 8vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -59,7 +60,7 @@ header nav ul li a{
 }
 .btn{
     background-color: transparent;
-    border: 1px solid #08415C;
+    border: 1px solid white;
     padding: 0.3em 1.8em;
     border-radius: 4px;
     cursor: pointer;
@@ -67,8 +68,8 @@ header nav ul li a{
     text-transform: uppercase;
 }
 .btn__primary{
-    background-color: #388697;
-    color: white;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #08415C;
     border: 1px solid transparent;
     transition: 500ms linear;
 }
@@ -90,7 +91,7 @@ header nav ul li a{
     z-index: 1;
 }
 .content__container{
-    color: #08415C;
+    color: rgba(255, 255, 255, 0.9);
     width: 100%;
     flex-basis: 50%;
     padding: 0 100px;
@@ -136,23 +137,25 @@ header nav ul li a{
     height: 100%;
     z-index: 2;
     flex-basis: 50%;
-    position: relative;
+    display: flex;
+    align-items: center;
 }
 .img__container img{
     width: 400px;
-    position: absolute;
+    position: relative;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 150px;
     transition: 500ms linear;
 }
 .img__container img:hover{
-    bottom: 170px;
+    bottom: 20px;
 }
 
 /* movies start from here */
 main{
     position: relative;
+    overflow: hidden;
 }
 .movies__container{
     display: flex;
@@ -196,7 +199,7 @@ main{
     border-radius: 8px;
     width: 20em;
     height: 35em;
-    padding: 10px 10px;
+    padding: 10px 20px;
     transition: 200ms linear;
 }
 .movie__container img{
@@ -244,7 +247,7 @@ main{
 
 .get__subscription__container{
     background-color: #388697;
-    margin: 3rem 10%;
+    margin: 7rem 10%;
     padding:3rem 2rem;
     border-radius: 8px ;
     color: white;
@@ -454,6 +457,10 @@ main{
 }
 .booking__image__container img{
     width: 20rem;
+    transition: 500ms linear;
+}
+.booking__image__container img:hover{
+    transform: translateY(-20px);
 }
 .booking__form{
     background-color: rgba(0, 0, 0, 0.055);
@@ -468,10 +475,6 @@ main{
     left: 50%;
     transform: translateX(-50%);
     top: -12rem;
-    transition: 500ms linear;
-}
-.booking__form img:hover{
-    transform: translateY(-20px);
 }
 .booking__form h4{
     color: #08415C;
@@ -598,6 +601,22 @@ footer .signup__user input[type="submit"]:hover{
     color: white;
 }
 
+.side__popup{
+    position: fixed;
+    overflow: hidden;
+    z-index: 1000;
+    right: 0;
+    top: 5rem;
+    background-color: rgb(16, 167, 16);
+    padding: 1rem 2rem;
+    color: white;
+    border-radius: 8px 0 0 8px;
+    transition: 700ms linear;
+    transform: translateX(15rem);
+}
+.side__popup h5{
+    font-weight: 300;
+}
 /* ==================MEDIA QURIES (MEDIUM DEVICES)=============== */
 
 @media screen and (max-width:1024px){
@@ -646,7 +665,10 @@ footer .signup__user input[type="submit"]:hover{
         margin-top: 3rem;
         flex-basis: 100%;
     }
-    .booking__form img{
+    .social__handles{
+        display: none;
+    }
+    .signup__user{
         display: none;
     }
 }
