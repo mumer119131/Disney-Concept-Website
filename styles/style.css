@@ -75,11 +75,11 @@ header nav ul li a{
 }
 .btn:hover{
     border: 1px solid transparent;
-    background-color: #08415C;
+    background-color: #388697;
     color: white;
 }
 .btn__primary:hover{
-    background-color: #08415C;
+    background-color: #388697;
 }
 
 .header__items__container{
@@ -149,7 +149,7 @@ header nav ul li a{
     transition: 500ms linear;
 }
 .img__container img:hover{
-    bottom: 20px;
+    width: 420px;
 }
 
 /* movies start from here */
@@ -407,6 +407,7 @@ main{
 }
 .team__member:hover .contact__btn__team{
     transition: 1s linear;
+    letter-spacing: 2px;
     display: block;
     bottom: 0;
 }
